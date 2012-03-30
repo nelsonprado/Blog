@@ -1,0 +1,10 @@
+<h1>Editing comentario</h1>
+
+<%= render 'form' %>
+
+<%= form_for :comentario, @comentario, :url => post_comentario_path, :html => { :multipart => true } do |form| %>
+  <%= form.file_field :avatar %>
+<% end %>
+
+<%= link_to 'Exibir', @comentario %> |
+<%= link_to 'Voltar', comentarios_path %>

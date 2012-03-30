@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Autor:</b>
+  <%= @comentario.autor %>
+</p>
+
+<p>
+  <b>Conteudo:</b>
+  <%= @comentario.conteudo %>
+</p>
+
+<p>
+  <b>Post:</b>
+  <%= @comentario.post %>
+</p>
+
+<%= image_tag @comentario.avatar.url %>
+<%= image_tag @comentario.avatar.url(:medium) %>
+<%= image_tag @comentario.avatar.url(:thumb) %>
+
+
+<%= link_to 'Editar', edit_comentario_path(@comentario) %> |
+<%= link_to 'Voltar', comentarios_path %>
